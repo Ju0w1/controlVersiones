@@ -11,7 +11,7 @@ version_required=20130729
 custom_tabs=0
 tab_use_spaces=0
 explorer_path=
-current_source=versiones.hpp
+current_source=versiones.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -19,7 +19,7 @@ cursor=2:0
 open=true
 [source]
 path=versiones.cpp
-cursor=10:13
+cursor=11:2
 open=true
 [header]
 path=versiones.hpp

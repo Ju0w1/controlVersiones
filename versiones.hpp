@@ -2,30 +2,40 @@
 #define VERSIONES_H
 #include <string>
 
+/*========Estructuras========*/
 enum retorno{
 	OK, ERROR, NO_IMPLEMENTADA
 };
-typedef enum retorno TipoRet;
 
 struct archivo{
 	char* name;
 	struct linea *lineas;
 };
-typedef archivo* Archivo;
-
 struct linea{
-	char contenido;
+	char* contenido;
 	int numero_linea;
 	linea* siguiente;
 };
-typedef linea* Linea;
 
+/*========TypeDef========*/
+typedef enum retorno TipoRet;
+typedef archivo* Archivo;
+typedef linea* Linea;
 typedef char* Cadena;
 
-Archivo crearArchivo(Cadena,Linea);
 
 
-
-
+/*========Definicion de funciones o procedimientos========*/
+void menu();
+void lecturaComando(Cadena, Archivo &, Linea &);
+void preCrearArchivo(Archivo &, Linea &);
+Archivo crearArchivo(Cadena, Linea &);// Crea el archivo.
+Linea crearLinea(Cadena,int); // Crea las lineas para el archivo.
+Linea cima(Linea);
+Linea desapilarLinea(Linea&);
+void insertarLinea(Linea&,Linea, Archivo &); //Apilar Linea
+void mostrarTexto(Archivo); // Muestra el texto del archivo.
+void borrarArchivo(Archivo); // Borra el archivo.
+void borrarLinea(Archivo,int); // Borra el número de la linea que se 
 
 #endif
