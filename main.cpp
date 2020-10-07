@@ -12,11 +12,15 @@ int main (int argc, char *argv[]) {
 	Archivo archivo = NULL;
 	Linea pila = NULL;
 	/*========Uso de funciones/procedimientos========*/
-	menu();
 	
-	gets(cmd);
 	
-	lecturaComando(cmd, archivo, pila);
+	do{
+		system("cls");
+		menu();
+		gets(cmd);
+		lecturaComando(cmd, archivo, pila);
+		system("pause");
+	}while(strcmp(strlwr(cmd), "salir") != 0);
 	
 	
 	return 0;

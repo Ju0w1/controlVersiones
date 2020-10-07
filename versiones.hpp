@@ -28,14 +28,16 @@ typedef char* Cadena;
 /*========Definicion de funciones o procedimientos========*/
 void menu();
 void lecturaComando(Cadena, Archivo &, Linea &);
-void preCrearArchivo(Archivo &, Linea &);
-Archivo crearArchivo(Cadena, Linea &);// Crea el archivo.
+void preCrearArchivo(Archivo &);
+Archivo crearArchivo(Cadena);// Crea el archivo.
 Linea crearLinea(Cadena,int); // Crea las lineas para el archivo.
 Linea cima(Linea);
 Linea desapilarLinea(Linea&);
-void insertarLinea(Linea&,Linea, Archivo &); //Apilar Linea
+void insertarLinea(Linea&,Linea); //Apilar Linea
 void mostrarTexto(Archivo); // Muestra el texto del archivo.
-void borrarArchivo(Archivo); // Borra el archivo.
-void borrarLinea(Archivo,int); // Borra el número de la linea que se 
-
+void borrarArchivo(Archivo &); // Borra el archivo.
+void borrarLinea(Archivo &,int); // Borra el número de la linea que se 
+void preBorrarLinea(Archivo &);
+void tipoRetorno(TipoRet);
+void preCrearLinea(Linea &, Archivo &);
 #endif
