@@ -8,7 +8,7 @@ using namespace std;
 
 int main (int argc, char *argv[]) {
 	/*========Variables========*/
-	Cadena cmd = new char[50];
+	Cadena cmd = new char[MAX_CHAR];
 	Archivo archivo = NULL;
 	Linea pila = NULL;
 	/*========Uso de funciones/procedimientos========*/
