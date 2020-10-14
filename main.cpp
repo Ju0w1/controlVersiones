@@ -15,11 +15,9 @@ int main (int argc, char *argv[]) {
 	
 	
 	do{
-		system("cls");
 		menu();
 		gets(cmd);
 		lecturaComando(cmd, archivo, pila);
-		system("pause");
 	}while(strcmp(strlwr(cmd), "salir") != 0);
 	
 	
